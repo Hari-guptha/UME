@@ -10,30 +10,25 @@
   overflow-x: hidden !important;
 }
 
-/* Webkit browsers (Chrome, Safari, Edge) */
+/* For WebKit Browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 12px;
-  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: black;
-  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
-  border-radius: 100px;
+  border-radius: 10px;
+  border: 3px solid transparent;
 }
 
-/* Firefox */
+/* For Firefox */
 * {
   scrollbar-width: thin;
-  /* Width of the scrollbar */
-  scrollbar-color: linear-gradient(180deg, #d0368a, #708ad4) rgba(255, 255, 255, 0.5);
-  /* Color of the scrollbar thumb and track */
-}
-
-::-moz-scrollbar-thumb {
-  background-color: black;
-  border-radius: 100px;
-  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
+  scrollbar-color: black transparent;
 }
 
 
@@ -69,7 +64,7 @@
 #Navbtn {
   border-radius: 50px;
   padding: 5px 20px;
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-weight: 300;
   cursor: pointer;
   width: fit-content;
@@ -125,7 +120,7 @@ a {
 
 /* ------------Home------------------------------ */
 #HomeMain {
-  background: url('../Images/MainBackground.png');
+  background: linear-gradient(to right, #9fd3fb, #d9e2f6, #f1c1e8);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0px 5%;
@@ -318,6 +313,281 @@ a {
 }
 
 
+/* -----------------service---------------------------- */
+
+#Service {
+  padding: 5%;
+}
+
+#Title {
+  font-size: 34px;
+}
+
+#Service #Title {
+  background: linear-gradient(to right, #4885FB, #5365DA, #D341A5);
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#serviceimg {
+  margin-top: 20px;
+  width: 65%;
+}
+
+/* --------------------------Aim--------------------------------------- */
+
+#Aim #Title {
+  background: linear-gradient(to right, #BC3EE7, #039987);
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Aim #SubTitle {
+  color: white;
+}
+
+#SubTitle {
+  font-size: 16px;
+  font-weight: 400;
+  width: 50%;
+}
+
+#Aim {
+  background: linear-gradient(to bottom right, #000000, #1d2136);
+  width: 100%;
+  padding: 5% 5% 10% 5%;
+}
+
+#AimCards {
+  display: flex;
+  gap: 40px;
+}
+
+#AimCard {
+  margin-top: 3%;
+  padding: 2%;
+  width: 24%;
+  /* Adjust the width as needed */
+  height: 300px;
+  background: rgba( 52, 52, 52, 0.5 );
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+  backdrop-filter: blur( 13.5px );
+  -webkit-backdrop-filter: blur( 13.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#AimCard h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#AimCard h5 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+/* ----------------equation ------------------- */
+
+#Equation {
+  padding: 5% 5% 0px 5%;
+  background: linear-gradient(to top left, #9cbaef, #dae0f5, #ffffff);
+}
+
+#Equation #Title {
+  background: linear-gradient(to right, #0565FF, #7D0399);
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Equationimg {
+  margin-top: 8%;
+  width: 80%;
+}
+
+#Area {
+  background-color: #1E1D1F;
+  padding: 5% 5% 0 5%;
+}
+
+#Areaimg {
+  margin-top: 10%;
+  width: 60%;
+}
+
+#Area #Title {
+  background: linear-gradient(to right, #FF7BF0, #FF8CAF);
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Area #SubTitle {
+  color: white;
+}
+
+#sector-bg {
+  background-image: url('../Images/sector-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ----------------choose us--------------- */
+#Choose {
+  width: 100%;
+  padding: 5% 5% 5% 5%;
+}
+
+#Choose #Title {
+  background: linear-gradient(to right, #3C85FC, #FF6090);
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Choose #SubTitle {
+  color: rgb(0, 0, 0);
+}
+
+#chus {
+  margin: 5% 0px 0px 0px;
+}
+
+#chus h5 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #3C85FC;
+}
+
+#chus h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  width: 70%;
+}
+
+#contact{
+  background-color: #1E1D1F;
+  padding: 5% 5% 5% 5%;
+}
+
+#contact #Title {
+  background: linear-gradient(to right, #5886FF, #DF869F,#60C6FF);
+  width: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contact #SubTitle {
+  color: rgb(255, 255, 255);
+}
+
+#ContactForm{
+  width: 60%;
+  margin-top: 3%;
+  padding: 5%;
+  height: fit-content;
+  background: rgba( 52, 52, 52, 0.5 );
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+  backdrop-filter: blur( 13.5px );
+  -webkit-backdrop-filter: blur( 13.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#ContactForm h5{
+  color: white;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#ContactForm input{
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border-color: white;
+  border-radius: 10px;
+  padding: 10px 30px;
+  width: 90%;
+  font-weight: 400;
+}
+
+#contactbtn{
+  background-color: white !important;
+  padding: 10px 30px !important;
+  color: #000000 !important;
+  margin-top: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contactbtn:hover{
+  color: white !important;
+  background-color: var(--BrandColor) !important;
+}
+
+
+#FooterMain{
+  background-color: white;
+}
+
+#FooterMain h5{
+  font-size: 14px;
+  font-weight: 400;
+  width: 60%;
+  margin-top: 20px;
+}
+
+#rr{
+  background-color: #000000;
+  color: white;
+  font-weight: 400;
+  padding:2% 0;
+  text-align: center;
+}
+
+#footerbtn{
+  background-color: #000000;
+  padding: 20px 50px;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#footerbtn:hover{
+  background-color: var(--SecondBrandColor);
+  color: white;
+}
+#socialicons{
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#footericon{
+  width: 30px;
+  cursor: pointer;
+}
+
+#FooterLinks h5{
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+#FooterLinks h5:hover{
+  color: var(--BrandColor);
+}
+
 @media only screen and (max-width:600px) {
   #HomeMain h5 {
     font-size: 25px;
@@ -331,118 +601,112 @@ a {
   #HomeBtn {
     margin-bottom: 75%;
   }
-}
-
-/* -----------------service---------------------------- */
-
-#Service {
-  padding: 5%;
-}
-
-#Title{
-  font-size: 34px;
-}
-
-#Service #Title{
-  background: linear-gradient(to right, #4885FB,#5365DA, #D341A5);
-  width: fit-content;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-}
-
-#serviceimg{
-  margin-top: 20px;
-  width: 65%;
-}
-/* --------------------------Aim--------------------------------------- */
-
-#Aim #Title{
-  background: linear-gradient(to right, #BC3EE7, #039987);
-  width: fit-content;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#Aim #SubTitle{
-  color: white;
-}
-
-#SubTitle {
-  font-size: 16px;
-  font-weight: 400;
-  width: 40%;
-}
-
-#Aim{
-  background: linear-gradient(to bottom right, #000000, #1d2136);
-  width: 100%;
-  padding: 5% 5% 10% 5%;
-}
-
-#AimCards{
-  display: flex;
-  gap: 40px;
-}
-
-#AimCard{
-  margin-top: 3%;
-  padding: 2%;
-  width: 24%; /* Adjust the width as needed */
-  height: 300px; /* Adjust the height as needed */
-  background: linear-gradient(135deg, #1b1e2f, #3a3e57);
-  border-radius: 10px; /* Adjust the border radius as needed */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-#AimCard h4{
-  font-size: 18px;
-  font-weight: 500;
-}
-
-#AimCard h5{
-  margin-top: 20px;
-  font-weight: 400;
-  font-size: 14px;
-  color: #b2b2b2;
-}
-
-/* ----------------equation ------------------- */
-
-#Equation{
-  padding: 5% 5% 0px 5%;
-  background: linear-gradient(to top left, #9cbaef, #dae0f5, #ffffff);
-}
-
-#Equation #Title{
-  background: linear-gradient(to right, #0565FF, #7D0399);
-  width: fit-content;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#Equationimg{
-  margin-top: 8%;
-  width: 80%;
-}
-
-#Area{
-  background-color: #1E1D1F;
-}
-
-#Areaimg{
-  margin-top: 0%;
-  width: 100%;
-  /* background-color: ; */
-}
-
-#Area #Title{
-  position: absolute;
-}
-
-#Area #SubTitle{
-  padding-top: 4%;
-  position: absolute;
+  #Service #Title{
+    margin-top: 10%;
+    font-size: 22px;
+  }
+  #Service #SubTitle{
+    margin-top: 5%;
+    font-size: 16px;
+    width: 100%;
+  }
+  #serviceimg{
+    margin:20% 0 20% 0;
+    width: 100%;
+  }
+  #Aim #Title{
+    margin-top: 10%;
+    font-size: 22px;
+  }
+  #Aim #SubTitle{
+    margin-top: 5%;
+    font-size: 16px;
+    width: 90%;
+  }
+  #AimCards{
+    margin-top: 10%;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  #AimCard{
+    width: 70%;
+    height: fit-content;
+    padding: 10%;
+  }
+  #Equation #Title{
+    margin-top: 10%;
+    font-size: 22px;
+  }
+  #Equation #SubTitle{
+    margin-top: 5%;
+    font-size: 16px;
+    width: 90%;
+  }
+  #Equationimg{
+    padding-top: 10%;
+    width: 100%;
+  }
+  #Area #Title{
+    margin-top: 10%;
+    font-size: 22px;
+  }
+  #Area #SubTitle{
+    margin-top: 5%;
+    font-size: 16px;
+    width: 90%;
+  }
+  #Areaimg{
+    padding-top: 10%;
+    width: 100%;
+  }
+  #Choose #Title{
+    margin-top: 10%;
+    font-size: 22px;
+  }
+  #Choose #SubTitle{
+    margin-top: 5%;
+    font-size: 16px;
+    width: 90%;
+  }
+  #chus h5{
+    font-size: 16px;
+  }
+  #chus h6{
+    font-size: 12px;
+    width: 90%;
+  }
+  #contact #Title{
+    margin-top: 10%;
+    font-size: 22px;
+  }
+  #contact #SubTitle{
+    margin-top: 5%;
+    font-size: 16px;
+    width: 90%;
+  }
+  #ContactForm{
+    margin: 10% 0;
+    width: 400px;
+  }
+  #ContactForm input{
+    width: 80%;
+  }
+  #footersuper{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  #footerbtn{
+    text-align: center;
+  }
+  #FooterLinks{
+    text-align: center;
+  }
+  #PhoneNav{
+    background-color: white;
+  z-index: 1000;
+  }
+  #supercontent{
+    margin: 10% 0;
+  }
 }

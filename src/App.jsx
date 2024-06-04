@@ -2,11 +2,12 @@ import { Route, Routes } from "react-router-dom"
 import "./assets/Css/Main.Css"
 import Home from "./Components/Home"
 import NavBar from "./Components/NavBar"
+import Footer from "./Components/Footer"
 
 function App() {
   return (
     <>
-    <NavBar/>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<>
@@ -15,6 +16,7 @@ function App() {
             <p>The page encountered an error and cannot be displayed.</p>
           </div></>} />
       </Routes>
+      <Footer />
     </>
   )
 }

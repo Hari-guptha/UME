@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../assets/Images/Icons/Blacklogo.png'
 import { Box, Drawer } from '@mui/material'
 import { Link } from 'react-router-dom'
@@ -11,6 +11,20 @@ const NavBar = () => {
     const [NavControl, setNavControl] = useState(false)
     const [NavScroll, setNavScroll] = useState(false);
 
+const scrollToTarget = (target, offset = 100) => {
+  console.log(target);
+  const element = document.getElementById(target);
+  if (element) {
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+      
     useEffect(() => {
       const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -19,6 +33,7 @@ const NavBar = () => {
             setNavScroll(false)
         }
       };
+
   
       window.addEventListener('scroll', handleScroll);
   
@@ -34,11 +49,11 @@ const NavBar = () => {
                 <div id='NavBarMain' style={{ backgroundColor: NavScroll ? 'black' : 'transparent' }} >
                     <img id='LogoImg' src={Logo} alt="Logo" />
                     <div id='NavItems'>
-                        <Link to="#"><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Home</h4></Link>
-                        <Link to="#"><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Solutions</h4></Link>
-                        <Link to="#"><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">About Us</h4></Link>
-                        <Link to="#"><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Contact Us</h4></Link>
-                        <Link to="#"><h4 style={{ background: NavScroll ? '#1E1D1F' : 'black' , color: NavScroll ? 'white' : 'white'}} id="Navbtn">Get Proposal</h4></Link>
+                        <Link to="#" onClick={() => scrollToTarget('HomeMain')}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Home</h4></Link>
+                        <Link to="#" onClick={() => scrollToTarget('Service',40)}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Solutions</h4></Link>
+                        <Link to="#" onClick={() => scrollToTarget('Aim',60)}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Aim</h4></Link>
+                        <Link to="#" onClick={() => scrollToTarget('contact',30)}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Contact Us</h4></Link>
+                        <Link to="#" onClick={() => scrollToTarget('contact',30)}><h4 style={{ background: NavScroll ? '#1E1D1F' : 'black' , color: NavScroll ? 'white' : 'white'}} id="Navbtn">Get Proposal</h4></Link>
                     </div>
                 </div>
             </Box>
@@ -52,17 +67,17 @@ const NavBar = () => {
                 anchor={'left'}
                 open={NavControl}
                 onClose={e => (setNavControl(false))} >
-                <div style={{padding:'10%',width:"250px"}}>
+                <div style={{padding:'10%',width:"250px",zIndex:1000}}>
                     <div id='SideBarFirstPart' style={{ display: "flex" }}>
                         <Link className='Link' to="/"><img src={Logo} id="LogoImg" onClick={e => (setNavControl(false))} alt="logo" /></Link>
                         <CloseIcon id="closeicon" onClick={e => (setNavControl(false))} />
                     </div>
                     <div id='SideBarContainer'>
-                    <Link to="#"><h4 id="NavItem">Home</h4></Link>
-                        <Link to="#"><h4 id="NavItem">Solutions</h4></Link>
-                        <Link to="#"><h4 id="NavItem">About Us</h4></Link>
-                        <Link to="#"><h4 id="NavItem">Contact Us</h4></Link>
-                        <Link to="#"><h4 style={{marginTop:"20%"}}  id="Navbtn">Get Proposal</h4></Link>
+                    <Link to="#" onClick={() =>{scrollToTarget('HomeMain'),setNavControl(false)}}><h4 id="NavItem">Home</h4></Link>
+                        <Link to="#"  onClick={() =>{scrollToTarget('Service',40),setNavControl(false)}}><h4 id="NavItem">Solutions</h4></Link>
+                        <Link to="#" onClick={() =>{scrollToTarget('Aim',60),setNavControl(false)}}><h4 id="NavItem">Aim</h4></Link>
+                        <Link to="#" onClick={() =>{scrollToTarget('contact',30),setNavControl(false)}}><h4 id="NavItem">Contact Us</h4></Link>
+                        <Link to="#" onClick={() =>{scrollToTarget('contact',30),setNavControl(false)}}><h4 style={{marginTop:"20%"}}  id="Navbtn">Get Proposal</h4></Link>
                     </div>
                 </div>
             </Drawer>
