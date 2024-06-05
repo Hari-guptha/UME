@@ -46,14 +46,14 @@ const scrollToTarget = (target, offset = 100) => {
     return (
         <div>
             <Box sx={{ display: { sm: "block", xs: "none" } }}>
-                <div id='NavBarMain' style={{ backgroundColor: NavScroll ? 'black' : 'transparent' }} >
+                <div id='NavBarMain' style={{ backgroundColor: NavScroll ? '#1e1d1f' : 'transparent' }} >
                     <img id='LogoImg' src={Logo} alt="Logo" />
                     <div id='NavItems'>
                         <Link to="#" onClick={() => scrollToTarget('HomeMain')}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Home</h4></Link>
                         <Link to="#" onClick={() => scrollToTarget('Service',40)}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Solutions</h4></Link>
                         <Link to="#" onClick={() => scrollToTarget('Aim',60)}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Aim</h4></Link>
                         <Link to="#" onClick={() => scrollToTarget('contact',30)}><h4 className={NavScroll ? 'darkscroll': 'noscroll'} id="NavItem">Contact Us</h4></Link>
-                        <Link to="#" onClick={() => scrollToTarget('contact',30)}><h4 style={{ background: NavScroll ? '#1E1D1F' : 'black' , color: NavScroll ? 'white' : 'white'}} id="Navbtn">Get Proposal</h4></Link>
+                        <Link to="#" onClick={() => scrollToTarget('contact',30)}><h4 style={{ background: NavScroll ? 'black' : 'black' , color: NavScroll ? 'white' : 'white'}} id="Navbtn">Get Proposal</h4></Link>
                     </div>
                 </div>
             </Box>
