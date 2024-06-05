@@ -53,7 +53,7 @@ const scrollToTarget = (target, offset = 100) => {
                 <h5 id='SubTitle'>We are here to deliver a future where AI integrates with every business by offering cloud-based solutions that are tailor-made to meet the distinct requirements of each client.</h5>
                 <div id='AimCards'>
                     <div id='AimCard'>
-                        <h4 style={{ color: "#D482F0" }}>Hold in high regard our clients</h4>
+                        <h4 style={{ color: "#D482F0" }}>Inclusivity</h4>
                         <h5>Our morals don't shift between the affluence of the clients. All clients are treated with respect irrespective of their background, size, or budget. We believe in honoring the dignity and worth of every individual and organization we serve, fostering a culture of inclusivity, fairness, and mutual respect in all our interactions.</h5>
                     </div>
                     <div id='AimCard'>
@@ -68,8 +68,7 @@ const scrollToTarget = (target, offset = 100) => {
             </div>
             <div id='Equation'>
                 <h4 id='Title'>Our Innovation Equation</h4>
-                <h5 id='SubTitle'>An unorthodox group of innovators with an abnormal thirst for excellence.
-                    We don't refer our clients as customers we address them as allies</h5>
+                <h5 id='SubTitle'>At Ume, we are dedicated to transforming your vision into reality through our robust 3D approach. Whether it's a new software development project or an upgrade to existing systems, we are committed to delivering exceptional results that drive your business forward.</h5>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                     <img id='Equationimg' src={Equation} alt="equation" />
                 </div>
@@ -77,8 +76,7 @@ const scrollToTarget = (target, offset = 100) => {
             <div id='Area'>
                 <div id='sector-bg'>
                     <h4 id='Title'>Service Spectrum</h4>
-                    <h5 id='SubTitle'>An unorthodox group of innovators with an abnormal thirst for excellence.
-                        We don't refer our clients as customers we address them as allies</h5>
+                    <h5 id='SubTitle'>Ume's staff consists of pioneers from a variety of industries, including healthcare, education, journalism, and e-commerce. Our ability to draw from a wide range of disciplines allows us to have a profound understanding of the particular needs and difficulties that each of our clients face. By utilizing this extensive experience, we are dedicated to providing solid, customized solutions that successfully meet the unique demands of our clients.</h5>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                         <img id='Areaimg' src={Area} alt="equation" />
                     </div>
