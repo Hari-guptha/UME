@@ -34,6 +34,7 @@ const scrollToTarget = (target, offset = 100) => {
                 <div id='FooterLinks'>
                     <h4>Contact Us </h4>
                     <h5>Gmail : adithyanannadurai@gmail.com</h5>
+                    <h5>Phone Number : 7708029290</h5>
                     <h5>Phone Number : 7708266927</h5>
                 </div>
                 <div>
