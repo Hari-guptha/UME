@@ -540,6 +540,7 @@ a {
 
 #FooterMain{
   background-color: white;
+  width: 30%;
 }
 
 #FooterMain h5{
@@ -582,6 +583,14 @@ a {
   cursor: pointer;
 }
 
+#mailsentnote{
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px !important;
+  color: green !important;
+}
+
 #FooterLinks h5{
   font-size: 14px;
   font-weight: 500;
@@ -601,6 +610,9 @@ a {
 
   #mouse-scroll {
     margin-top: 150%;
+  }
+  #sector-bg{
+    padding: 0 5%;
   }
 
   #HomeBtn {
@@ -652,6 +664,9 @@ a {
     padding-top: 10%;
     width: 100%;
   }
+  #Area{
+    padding: 0;
+  }
   #Area #Title{
     margin-top: 10%;
     font-size: 22px;
@@ -669,6 +684,17 @@ a {
     margin-top: 10%;
     font-size: 22px;
   }
+  #FooterMain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  #FooterMain h5{
+    margin-top: 20px;
+  } 
   #Choose #SubTitle{
     margin-top: 5%;
     font-size: 16px;

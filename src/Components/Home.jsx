@@ -1,11 +1,13 @@
-import { Height } from '@mui/icons-material'
-import React from 'react'
+import { FlashAuto, Height } from '@mui/icons-material'
+import React, { useRef, useState } from 'react'
 import service from '../assets/Images/area.png'
 import Equation from '../assets/Images/Equation.png'
 import Area from '../assets/Images/sector.png'
-import { Tilt } from 'react-tilt'
+// import { Tilt } from 'react-tilt'
+import emailjs from '@emailjs/browser';
 
 const Home = () => {
+    // const [emailpop,setemailpop] = useState(false)
 
 const scrollToTarget = (target, offset = 100) => {
   console.log(target);
@@ -19,6 +21,26 @@ const scrollToTarget = (target, offset = 100) => {
       behavior: 'smooth'
     });
   }
+};
+const form = useRef();
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm('service_2990nrh', 'template_iqjgat4', form.current, {
+      publicKey: 'gRcX2hKU8c9l6tqeW',
+    })
+    .then(
+      () => {
+        const element = document.getElementById("mailsentnote");
+        element.style.display = "block"
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
 };
 
     return (
@@ -104,16 +126,17 @@ const scrollToTarget = (target, offset = 100) => {
                 <h4 id='Title'>Contact US</h4>
                 <h5 id='SubTitle'>Benefit from the expertise of our team of fresh minds who possess a deep understanding of AI, cloud technology, and emerging trends in the digital landscape.</h5>
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                    <form action="/Contact" method="post" id='ContactForm'>
+                    <form ref={form} onSubmit={sendEmail} id='ContactForm'>
                         <h5>Name</h5>
-                        <input type="text" placeholder='Enter your name' />
+                        <input name="user_name" type="text" placeholder='Enter your name' />
                         <h5 style={{ marginTop: "20px" }}>Email</h5>
-                        <input type="text" placeholder='Enter your Email' />
+                        <input name="user_email" type="text" placeholder='Enter your Email' />
                         <h5 style={{ marginTop: "20px" }}>Comment</h5>
-                        <input type="text" placeholder='Enter your Comment' />
+                        <input name="message" type="text" placeholder='Enter your Comment' />
                         <div style={{ display: "flex", justifyContent: "center" }}>
-                            <h5 id='contactbtn'>Submit</h5>
+                            <input onClick={()=>setemailpop(true)} type="submit" value="Send" style={{width:'200px'}} id='contactbtn' />
                         </div>
+                        <h5 id='mailsentnote'>Email Successfully Sent!</h5>
                     </form>
                 </div>
             </div>

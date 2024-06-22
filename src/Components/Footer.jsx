@@ -31,6 +31,11 @@ const scrollToTarget = (target, offset = 100) => {
                     <h5 onClick={() => scrollToTarget('Aim',60)}>Aim</h5>
                     <h5 onClick={() => scrollToTarget('contact',30)}>Contact Us</h5>
                 </div>
+                <div id='FooterLinks'>
+                    <h4>Contact Us </h4>
+                    <h5>Gmail : adithyanannadurai@gmail.com</h5>
+                    <h5>Phone Number : 7708266927</h5>
+                </div>
                 <div>
                     <h5 id='footerbtn' onClick={() => scrollToTarget('contact',30)}>Get Proposal</h5>
                     <h6 id='socialicons'>Social Media</h6>
